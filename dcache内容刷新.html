@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>dcacheÄÚÈÝË¢ÐÂ.html</title>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+body {
+  margin: 15px 15px 15px 15px;
+  background-color: #ffffff;
+}
+/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table /* Normal text */
+{
+ font-size: 9pt;
+ font-family: 'ËÎÌå';
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+a.rvts1, span.rvts1 /* Hyperlink */
+{
+ color: #0000ff;
+ text-decoration: underline;
+}
+span.rvts2
+{
+ font-size: 10pt;
+}
+span.rvts3
+{
+ font-size: 12pt;
+ font-weight: bold;
+ color: #000000;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2
+{
+ text-indent: 28px;
+ line-height: 1.50;
+}
+.rvps3
+{
+ text-align: center;
+ text-indent: 28px;
+ line-height: 1.50;
+}
+--></style>
+</head>
+<body>
+
+<p class=rvps3><span class=rvts3>dcache&#20869;&#23481;&#21047;&#26032;</span></p>
+<p class=rvps2><span class=rvts3><br></span></p>
+<p class=rvps2><span class=rvts2>URL&#21047;&#26032;&#21407;&#29702;:</span></p>
+<p class=rvps2><span class=rvts2>&#20351;&#29992;&#30340;&#26159;ATS&#25552;&#20379;&#30340;HTTP_UI&#25509;&#21475;&#65292;&#30452;&#25509;&#24490;&#29615;&#35843;&#29992; CacheProcessor::remove &#21024;&#38500;URL&#12290;</span></p>
+<p class=rvps2><span class=rvts2><br></span></p>
+<p class=rvps2><span class=rvts2>URL&#21047;&#26032;&#35302;&#21457;&#25805;&#20316;:</span></p>
+<p class=rvps2><span class=rvts2>ShowCache::invalidate_url //&#36890;&#36807; if (strcmp(show_cache_urlstrs[urlstrs_index], "") == 0){ return complete(event, e); } &#32467;&#26463;&#24490;&#29615;&#12290;&nbsp;</span></p>
+<p class=rvps2><span class=rvts2>ShowCache::handleCacheInvalidateComplete &nbsp;//&#35302;&#21457; ShowCache::invalidate_url</span></p>
+<p class=rvps2><span class=rvts2>CacheProcessor::remove //&#35302;&#21457; ShowCache::handleCacheInvalidateComplete</span></p>
+<p class=rvps2><span class=rvts2><br></span></p>
+<p class=rvps2><span class=rvts2><br></span></p>
+<p class=rvps2><span class=rvts2><br></span></p>
+<p class=rvps2><span class=rvts2>&#30446;&#24405;&#21047;&#26032;&#21407;&#29702;:</span></p>
+<p class=rvps2><span class=rvts2>&#39318;&#20808;&#25509;&#25910;&#30446;&#24405;&#21047;&#26032;&#35831;&#27714;&#65292;&#26681;&#25454;host&#21644;path&#26469;&#26356;&#26032;HASH&#34920;&#65292;&#21518;&#38754;&#27599;&#20010;&#35831;&#27714;&#37117;&#20250;&#36890;&#36807;HASH&#34920;&#21435;&#21028;&#26029;&#35813;&#35831;&#27714;&#26159;&#21542;&#34987;&#30446;&#24405;&#21047;&#26032;&#25805;&#20316;&#36807;&#65292;&#20877;&#26469;&#21028;&#26029;&#26159;&#21542;&#36807;&#26399;&#12290;</span></p>
+<p class=rvps2><span class=rvts2>HASH&#34920;&#37324;&#38754;&#30340;&#25968;&#25454;&#65292;&#22312;&#25509;&#25910;&#21040;&#30446;&#24405;&#21047;&#26032;&#35831;&#27714;&#21518;&#20250;&#33258;&#21160;&#26356;&#26032; invalidate.config&#65288;&#21551;&#21160;&#26102;&#29992;&#65289;&#12290;</span></p>
+<p class=rvps2><span class=rvts2><br></span></p>
+<p class=rvps2><span class=rvts2>&#30446;&#24405;&#21047;&#26032;&#21021;&#22987;&#21270;:</span></p>
+<p class=rvps2><span class=rvts2>main</span></p>
+<p class=rvps2><span class=rvts2>CacheRefreshProcessor::start</span></p>
+<p class=rvps2><span class=rvts2>RefreshHandler::start</span></p>
+<p class=rvps2><span class=rvts2>initCacheInvalidate &nbsp;//&#35835;&#21462; invalidate.config &#37197;&#32622;&#25991;&#20214;&#65292;&#24182;&#29983;&#25104; CacheInvalidate::path_ht &#30340;HASH&#34920;&#65292;&#20197; host &#21644; path &#20026;&#32500;&#24230;&#12290;</span></p>
+<p class=rvps2><span class=rvts2>&nbsp; &nbsp; CacheInvalidate::CacheInvalidate</span></p>
+<p class=rvps2><span class=rvts2>&nbsp; &nbsp; CacheInvalidate::BuildTable</span></p>
+<p class=rvps2><span class=rvts2>&nbsp; &nbsp; CacheInvalidate::BuildTableFromFile</span></p>
+<p class=rvps2><span class=rvts2>thread-&gt;schedule_every(refreshHandler, REFRESH_PERIOD); &nbsp;//RefreshHandler::mainEvent &#24490;&#29615;&#25191;&#34892;&#65292;&#38388;&#38548;&#26102;&#38388;20&#27627;&#31186;</span></p>
+<p class=rvps2><span class=rvts2><br></span></p>
+<p class=rvps2><span class=rvts2>&#30446;&#24405;&#21047;&#26032;&#25805;&#20316;:</span></p>
+<p class=rvps2><span class=rvts2>ShowCache::invalidate_path</span></p>
+<p class=rvps2><span class=rvts2>addInvalidatePath</span></p>
+<p class=rvps2><span class=rvts2>CacheRefreshProcessor::NewEntry</span></p>
+<p class=rvps2><span class=rvts2>RefreshEntry::init //&#26681;&#25454;host&#21644;path&#29983;&#25104;&#20107;&#20214;RefreshEntry&#20803;&#32032;&nbsp;</span></p>
+<p class=rvps2><span class=rvts2>RefreshEntry::mainEvent &nbsp;//&#22238;&#35843;CacheRefreshProcessor::push_entry</span></p>
+<p class=rvps2><span class=rvts2>CacheRefreshProcessor::push_entry &nbsp;//&#23558;RefreshEntry&#20803;&#32032;&#28155;&#21152;&#21040; RefreshHandler::entries &#38431;&#21015;&#20013;</span></p>
+<p class=rvps2><span class=rvts2>RefreshHandler::mainEvent //&#23450;&#26102;&#28040;&#36153; RefreshHandler::entries &#38431;&#21015;&#20013;&#30340;&#20107;&#20214;</span></p>
+<p class=rvps2><span class=rvts2>CacheInvalidate::NewEntry //&#23558; RefreshEntry &#20107;&#20214;&#30340;&#30446;&#24405;&#21047;&#26032;&#25805;&#20316;&#28155;&#21152;&#21040; CacheInvalidate::path_ht &#30340;HASH&#34920;&#20013; &nbsp;</span></p>
+<p class=rvps2><span class=rvts2>eventProcessor.schedule_in(NEW(new CCI_UpdateContinuation(invalidate_mutex)), CACHE_INVALIDATE_TIMEOUT, ET_CACHE);</span></p>
+<p class=rvps2><span class=rvts2>&nbsp; &nbsp; CCI_UpdateContinuation::file_update_handler &nbsp;//60&#31186;&#21518;&#26356;&#26032; invalidate.config &#37197;&#32622;&#25991;&#20214;</span></p>
+<p class=rvps2><span class=rvts2>&nbsp; &nbsp; CacheInvalidate::WriteCacheInvalidateFile &nbsp;//&#23558; CacheInvalidate::path_ht &#30340;HASH&#34920;&#20013;&#30340;&#25968;&#25454;&#26356;&#26032;&#21040; invalidate.config &#37197;&#32622;&#25991;&#20214;&#20013;</span></p>
+<p class=rvps2><span class=rvts2><br></span></p>
+<p class=rvps2><span class=rvts2>&#30446;&#24405;&#21047;&#26032;&#35302;&#21457;&#25805;&#20316;:</span></p>
+<p class=rvps2><span class=rvts2>HttpTransact::HandleRequest</span></p>
+<p class=rvps2><span class=rvts2>update_cache_control_information_from_config</span></p>
+<p class=rvps2><span class=rvts2>getCacheControl</span></p>
+<p class=rvps2><span class=rvts2>getCacheInvalidate</span></p>
+<p class=rvps2><span class=rvts2>CacheInvalidate::Match //&#26681;&#25454;HASH&#34920;&#26356;&#26032;&#35831;&#27714;&#30340; result-&gt;invalidate_after &#21442;&#25968;</span></p>
+<p class=rvps2><span class=rvts2>HttpTransact::what_is_document_freshness //&#26681;&#25454; result-&gt;invalidate_after &#21442;&#25968;&#26469;&#21028;&#26029;&#35831;&#27714;&#26159;&#21542;&#36807;&#26399;</span></p>
+
+</body></html>
