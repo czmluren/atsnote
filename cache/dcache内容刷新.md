@@ -5,14 +5,14 @@ URL刷新原理:
 
 URL刷新触发操作:
 ShowCache::invalidate_url //通过 if (strcmp(show_cache_urlstrs[urlstrs_index], "") == 0){ return complete(event, e); } 结束循环。 
-ShowCache::handleCacheInvalidateComplete  //触发 ShowCache::invalidate_url
-CacheProcessor::remove //触发 ShowCache::handleCacheInvalidateComplete
+ShowCache::handleCacheInvalidateComplete  //调用 ShowCache::invalidate_url
+CacheProcessor::remove //删除url，并回调 ShowCache::handleCacheInvalidateComplete
 
 
 
 目录刷新原理:
-首先接收目录刷新请求，根据host和path来更新HASH表，后面每个请求都会通过HASH表去判断该请求是否被目录刷新操作过，再来判断是否过期。
-HASH表里面的数据，在接收到目录刷新请求后会自动更新 invalidate.config（启动时用）。
+首先接收目录刷新请求，根据host和path来更新HASH表，后面每个请求都会通过HASH表去判断该请求是否被目录刷新标记过，再来判断是否过期。
+HASH表里面的数据，在接收到目录刷新请求后会自动更新 invalidate.config（ATS启动时使用）。
 
 目录刷新初始化:
 main
@@ -44,3 +44,4 @@ getCacheControl
 getCacheInvalidate
 CacheInvalidate::Match //根据HASH表更新请求的 result->invalidate_after 参数
 HttpTransact::what_is_document_freshness //根据 result->invalidate_after 参数来判断请求是否过期
+
