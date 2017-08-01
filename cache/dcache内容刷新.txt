@@ -39,9 +39,9 @@ eventProcessor.schedule_in(NEW(new CCI_UpdateContinuation(invalidate_mutex)), CA
 
 目录刷新触发操作:
 HttpTransact::HandleRequest
-update_cache_control_information_from_config
-getCacheControl
-getCacheInvalidate
-CacheInvalidate::Match //根据HASH表更新请求的 result->invalidate_after 参数
+  update_cache_control_information_from_config
+    getCacheControl
+      getCacheInvalidate
+        CacheInvalidate::Match //根据HASH表更新请求的 result->invalidate_after 参数
 HttpTransact::what_is_document_freshness //根据 result->invalidate_after 参数来判断请求是否过期
 
