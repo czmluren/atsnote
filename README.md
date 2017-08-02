@@ -1,6 +1,6 @@
 -- 权利保留
 
-对本项目内容的任何转发和引用，请注明本项目地址：https://github.com/czmluren/ats_note
+对本项目内容的任何转发和引用，请注明本项目地址：https://github.com/czmluren/atsnote
 
 Apache Traffic Server 源代码分析
 1. 本项目主要是我对Apache Traffic Server源代码的分析结果，不局限于某个具体版本，但分析的版本我会在文中标明。
