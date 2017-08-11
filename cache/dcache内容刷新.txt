@@ -43,5 +43,5 @@ HttpTransact::HandleRequest
     getCacheControl
       getCacheInvalidate
         CacheInvalidate::Match //根据HASH表更新请求的 result->invalidate_after 参数
-HttpTransact::what_is_document_freshness //根据 result->invalidate_after 参数来判断请求是否过期
+HttpTransact::what_is_document_freshness //根据 result->invalidate_after 与 response_received_time 比较来判断请求是否过期
 
